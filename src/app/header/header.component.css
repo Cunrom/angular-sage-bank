@@ -1,0 +1,68 @@
+@font-face {
+    font-family: 'Zekton Bold';
+    src: url("../../assets/fonts/zektonbo.ttf");
+}
+.container {
+    width: 100%;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+.navbar-default {
+    background-color: white;
+    width: 100%;
+}
+.header {
+    width: 70%;
+    margin: 0 auto;
+    display: block;
+    font-size: 3em;
+    font-family: "Zekton Bold";
+    color: black;
+    text-align: center;
+}
+.navbar-nav {
+    width: 100%;
+}
+.navbar-collapse {
+    width: 100%;
+}
+.loginLink {
+    color: gray;
+    display: block;
+    font-weight: 500;
+    font-size: 2vw;
+    text-align: end;
+    margin-top: 3%;
+}
+#username {
+    color: gray;
+    vertical-align: middle;
+    margin-left: 3%;
+    font-weight: 500;
+    display: inline;
+    font-size: 2vw;
+}
+#profile {
+    margin-top: 2%;
+    width: 100%;
+    margin-left: 69%;
+}
+#profile-picture {
+    max-width: 8%;
+    vertical-align: middle;
+    height: auto;
+    border-radius: 50%;
+}
+.dropdownItem, a.dropdownItem {
+    display: block;
+    color: gray;
+    font-size: 1.5em;
+    margin-left: 84%;
+}
+.navbar-toggle {
+    margin-right: -5%;
+}

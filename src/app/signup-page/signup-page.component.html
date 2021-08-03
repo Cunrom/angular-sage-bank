@@ -1,0 +1,33 @@
+<div class="container" [ngStyle]="{backgroundImage: backgroundImage()}">
+    <div class="row">
+        <div class="col-md-4 col-xs-0"></div>
+        <div id="signedUp" *ngIf="signedUp" class="col-md-12 col-xs-12">
+            <div *ngIf="signedUp" class="col text-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-check2-circle" viewBox="0 0 16 16">
+                    <path
+                        d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z" />
+                    <path
+                        d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z" />
+                </svg>
+                <h3>Congratulations, {{ username }}! You have signed up successfully.</h3>
+            </div>
+        </div>
+        <div *ngIf="!signedUp" id="body" class="col-md-4 col-xs-12">
+            <h1>Signup</h1>
+            <form *ngIf="!signedUp" (ngSubmit)="onSubmit()" [formGroup]="signupData">
+                <input [ngClass]="{'usernameTaken': usernameTaken}" class="form-control" type="text"
+                    formControlName="username" id="username" placeholder="Username">
+                <span *ngIf="usernameTaken" class="help-block">This username is already taken</span>
+                <input [ngClass]="{'passwordNotMatch': passwordNotMatch}" class="form-control" type="password"
+                    id="password" formControlName="password" placeholder="Password">
+                <input [ngClass]="{'passwordNotMatch': passwordNotMatch}" type="password" class="form-control"
+                    formControlName="confirmPassword" placeholder="Confirm Password">
+                <span class="help-block" *ngIf="passwordNotMatch">Passwords does not match</span>
+                <span class="help-block" *ngIf="fieldsAreEmpty">Field(s) cannot be empty</span>
+                <button class="btn btn-primary" type="submit">Signup</button>
+            </form>
+        </div>
+        <div class="col-md-4 col-xs-0"></div>
+    </div>
+</div>

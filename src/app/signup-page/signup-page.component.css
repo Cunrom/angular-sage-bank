@@ -1,0 +1,57 @@
+@font-face {
+    font-family: 'Zekton Bold';
+    src: url("../../assets/fonts/zektonbo.ttf");
+}
+.container {
+    box-sizing: border-box;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+}
+.row {
+    display: block;
+    margin-top: 7%;
+}
+h1 {
+    text-align: center;
+    margin-bottom: 3vh;
+    color: black;
+}
+input {
+    margin: 4vh auto 2vh auto;
+    width: 61%;
+}
+input.ng-touched.ng-invalid {
+    border: 3px solid red;
+}
+.usernameTaken {
+    border: 3px solid red;
+}
+.passwordNotMatch {
+    border: 3px solid red;
+}
+.text-center {
+    margin-top: 3vh;
+}
+h3 {
+    font-size: 2.5em;
+    color: black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.bi-check2-circle {
+    color: green;
+    width: 20vw;
+    height: 20vh;
+}
+.help-block {
+    display: block;
+    color: red;
+    text-align: center;
+    font-style: italic;
+}
+.btn-primary {
+    display: block;
+    margin: 4vh auto 0 auto;
+    width: 61%;
+}

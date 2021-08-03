@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 col-xs-0"></div>
+        <div class="col-md-4 col-xs-12">
+            <h1 class="col text-center">Login</h1>
+            <form (ngSubmit)="onSubmit()" [formGroup]="loginData">
+                <input [ngClass]="{'red-border': userFieldEmpty}" name="username" class="form-control" type="text" id="username" placeholder="Username" formControlName="username">
+                <input [ngClass]="{'red-border': passwordFieldEmpty}" name="password" class="form-control" type="password" id="password" placeholder="Password" formControlName="password">
+                <span *ngIf="loggedInFailed && !fieldsAreEmpty" class="help-block">Username or password is incorrect</span>
+                <span *ngIf="fieldsAreEmpty" class="help-block">Field(s) cannot be empty</span>
+                <button class="btn btn-primary" type="submit">Login</button>
+            </form>
+            <a id="forgotPassword" routerLink="forgot-password">Forgot Password?</a>
+            <h3 id="newHere" class="col text-center">New Here?</h3>
+            <a id="signup" routerLink="/signup"><button class="btn btn-primary">Signup</button></a>
+        </div>
+        <div class="col-md-4 col-xs-0"></div>
+    </div>
+</div>

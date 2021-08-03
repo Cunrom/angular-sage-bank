@@ -1,0 +1,28 @@
+<nav class="navbar navbar-default">
+    <div class="container">
+        <div class="col-md-5">
+
+        </div>
+        <div class="col-md-2">
+            <button type="button" class="navbar-toggle" (click)="onNavbarToggle()">
+                <svg id="hamburger-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                    class="bi bi-list" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                </svg>
+            </button>
+            <a routerLink="/" class="header">Sage</a>
+        </div>
+        <div class="col-md-5">
+            <div class="navbar-collapse" [class.collapse]="collapsed" (window:resize)="onWindowResize()">
+                <ul>
+                    <li *ngIf="!loggedIn"><a routerLink="/login" [ngClass]="{'loginLink': collapsed, 'dropdownItem': !collapsed}">Login</a></li>
+                    <div id="profile" *ngIf="loggedIn">
+                        <img *ngIf="collapsed" id="profile-picture" src="../../assets/images/default-pfp.jpg"><a *ngIf="!collapsed" href="#">Account</a><a *ngIf="collapsed" href="#" id="username">{{
+                            username }}</a>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
