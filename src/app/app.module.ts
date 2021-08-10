@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import {HttpClientModule } from '@angular/common/http'
 
@@ -23,7 +23,6 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
   imports: [
     BrowserModule,
     RouterLinkModule,
-    FormsModule,
     HttpClientModule,
     ReactiveFormsModule
   ],
